@@ -2323,20 +2323,23 @@
     <!-- Custom JavaScript -->
     <script>
       
-          // confestti js animation
-          // Wait for the page to fully load
-        window.onload = function() {
-            // Launch confetti when the page loads
-            confetti({
-                particleCount: 150, // Number of confetti particles
-                spread: 90, // Spread angle (how wide the confetti will go)
-                origin: { y: 0.6 }, // Origin point of the confetti (adjust Y for height)
-                gravity: 0.5, // Confetti gravity (how fast it falls)
-                scalar: 1, // Scale of confetti (larger = bigger particles)
-                shapes: ["circle", "square"], // Shapes of the confetti
-                colors: ["#ff0000", "#00ff00", "#0000ff"], // Colors for confetti
-            });
-        };
+     // Wait for the page to fully load
+window.onload = function() {
+    // Delay confetti launch by 2 seconds
+    setTimeout(function() {
+        // Launch confetti at the center of the screen
+        confetti({
+            particleCount: 150, // Number of confetti particles
+            spread: 90, // Spread angle (how wide the confetti will go)
+            origin: { x: 0.5, y: 0.5 }, // Origin point at the center of the screen
+            gravity: 0.5, // Confetti gravity (how fast it falls)
+            scalar: 1, // Scale of confetti (larger = bigger particles)
+            shapes: ["circle", "square"], // Shapes of the confetti
+            colors: ["#ff0000", "#00ff00", "#0000ff"], // Colors for confetti
+        });
+    }, 2000); // 2 seconds delay
+};
+
 // confetti end
         // Business Settings
         let businessName = 'Glowify';
