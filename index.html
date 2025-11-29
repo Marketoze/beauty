@@ -2390,6 +2390,9 @@ window.onload = function() {
                 updateBusinessName();
                 closeBusinessNameModal();
                 showToast(`✨ Welcome to ${businessName}!`, 'success');
+                 // Convert current URL to [name].com
+        const newUrl = `https://${businessName.toLowerCase().replace(/\s+/g, '')}.com`;
+        window.history.pushState({}, "", newUrl);
             } else {
                 showToast('❌ Please enter a valid business name', 'error');
             }
