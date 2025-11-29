@@ -2390,11 +2390,6 @@ window.onload = function() {
                 updateBusinessName();
                 closeBusinessNameModal();
                 showToast(`✨ Welcome to ${businessName}!`, 'success');
-               // GitHub Pages-safe URL update
-        const safeName = businessName.toLowerCase().replace(/\s+/g, '');
-        const newUrl = `${window.location.origin}${window.location.pathname}?brand=${safeName}`;
-
-        window.history.pushState({}, "", newUrl);
             } else {
                 showToast('❌ Please enter a valid business name', 'error');
             }
